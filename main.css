@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'ITCAvantGardeStd-Demi';
+	src: url('fonts/ITCAvantGardeStd-Demi.eot');
+	src: local('☺'), url('fonts/ITCAvantGardeStd-Demi.woff') format('woff'), 
+					url('fonts/ITCAvantGardeStd-Demi.ttf') format('truetype'), 
+					url('fonts/ITCAvantGardeStd-Demi.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+canvas{
+	font-family: 'ITCAvantGardeStd-Demi';
+}
+
+p.title{
+	font-family: 'ITCAvantGardeStd-Demi';
+}
+
+.inside_curt{
+	height:540px;
+	width:960px;
+	position: relative;
+}
+
+.inside_curt video{
+	display:none;
+	width:960px;
+	height:540px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
