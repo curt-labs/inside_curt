@@ -46,8 +46,10 @@ $(function(){
 		});
 
 	canvas.addEventListener('click',function(e){
-		var x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - canvas.offsetLeft;
-		var y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - canvas.offsetTop;
+		var x = e.x;
+		var y = e.y - 50;
+		// var x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - canvas.offsetLeft;
+		// var y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - canvas.offsetTop;
 
 		// Check Quality
 		ctx.beginPath();
@@ -58,7 +60,8 @@ $(function(){
 		ctx.lineTo(245.7, 400.8);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Quality');
+			playVideo('quality');
+			return;
 		}
 
 		// Check Electrical
@@ -70,7 +73,8 @@ $(function(){
 		ctx.lineTo(629.1, 486.0);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Electrical');
+			playVideo('electrical');
+			return;
 		}
 
 		// Check Welding
@@ -82,7 +86,8 @@ $(function(){
 		ctx.lineTo(437.4, 422.1);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Welding');
+			playVideo('video');
+			return;
 		}
 
 		// Check Distribution
@@ -94,7 +99,8 @@ $(function(){
 		ctx.lineTo(906.0, 486.0);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Distribution');
+			playVideo('distribution');
+			return;
 		}
 
 		// Check Finishing
@@ -106,7 +112,8 @@ $(function(){
 		ctx.lineTo(629.1, 400.8);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Finishing');
+			playVideo('distribution');
+			return;
 		}
 
 		// Check Company
@@ -118,7 +125,8 @@ $(function(){
 		ctx.lineTo(437.4, 486.0);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Company');
+			playVideo('company');
+			return;
 		}
 
 		// Check eCommerce
@@ -129,17 +137,23 @@ $(function(){
 		ctx.lineTo(906.0, 273.0);
 		ctx.lineTo(906.0, 209.1);
 		ctx.closePath();
+		console.log(x);
+		console.log(y);
 		if(ctx.isPointInPath(x, y)){
-			var vid = $('#ecomm').get()[0];
-			$('#ecomm').fadeIn();
-			$('#canvas').fadeOut();
-			vid.load();
-			vid.play();
-			vid.onended = function(e){
-				$('#ecomm').fadeOut();
-				$('#canvas').fadeIn();
-			};
-			$('.current').text('eCommerce');
+			playVideo('ecomm');
+			return;
+		}
+
+		// Check IT
+		ctx.moveTo(906.0, 273.1);
+		ctx.lineTo(671.7, 273.1);
+		ctx.lineTo(671.7, 336.9);
+		ctx.lineTo(906.0, 336.9);
+		ctx.lineTo(906.0, 273.1);
+		ctx.closePath();
+		if(ctx.isPointInPath(x, y)){
+			playVideo('it');
+			return;
 		}
 
 		// Check Market
@@ -151,7 +165,8 @@ $(function(){
 		ctx.lineTo(181.8, 400.8);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('1st to Market');
+			playVideo('market');
+			return;
 		}
 
 		// Check Fabrication
@@ -167,7 +182,8 @@ $(function(){
 		ctx.lineTo(160.5, 166.5);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Fabrication');
+			playVideo('fabrication');
+			return;
 		}
 
 		// Check Engineering
@@ -179,19 +195,10 @@ $(function(){
 		ctx.lineTo(906.0, 102.6);
 		ctx.closePath();
 		if(ctx.isPointInPath(x, y)){
-			$('.current').text('Engineering');
+			playVideo('engineering');
+			return;
 		}
 
-		// Check IT
-		ctx.moveTo(906.0, 273.0);
-		ctx.lineTo(671.7, 273.0);
-		ctx.lineTo(671.7, 336.9);
-		ctx.lineTo(906.0, 336.9);
-		ctx.lineTo(906.0, 273.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$('.current').text('IT');
-		}
 	})
 });
 
@@ -3243,4 +3250,16 @@ function draw(ctx) {
 
 	// iconsAndText/Guide
 	ctx.restore();
+}
+
+function playVideo(name){
+	var vid = $('#'+name).get()[0];
+	$('#'+name).fadeIn();
+	$('#canvas').fadeOut();
+	vid.load();
+	vid.play();
+	vid.onended = function(e){
+		$('#'+name).fadeOut();
+		$('#canvas').fadeIn();
+	};
 }
