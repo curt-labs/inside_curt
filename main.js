@@ -198,8 +198,9 @@ $(function(){
 			playVideo('engineering');
 			return;
 		}
-
-	})
+	});
+	
+	VideoJS.setupAllWhenReady();
 });
 
 function draw(ctx) {
@@ -3255,6 +3256,8 @@ function draw(ctx) {
 function playVideo(name){
 	var vid = $('#'+name).get()[0];
 	$('#'+name).fadeIn();
+	$('#'+name).addClass('video-js');
+	$('#'+name).attr('controls','controls');
 	$('#canvas').fadeOut();
 	vid.load();
 	vid.play();

@@ -30,3 +30,5 @@ p.title{
 	top: 0;
 	left: 0;
 }
+
+.vjs-default-skin .vjs-control-bar { font-size: 75% }
