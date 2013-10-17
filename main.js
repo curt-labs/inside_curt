@@ -27,7 +27,7 @@
 
 $(function(){
 
-	// jwplayer.key = "ABCDEFGHIJKLMOPQ";
+	jwplayer.key = "amS3PbnniWTmea1rfXkUiUweZYSV5JjaQ3M9+A==";
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 
@@ -200,6 +200,10 @@ $(function(){
 			return;
 		}
 	});
+
+	var completeHandler = function(){
+		$('.hidden-videos').fadeOut();
+	};
 
 	jwplayer("company").setup({
 		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
@@ -632,9 +636,6 @@ $(function(){
 		height:540,
 	}).onComplete(completeHandler);
 
-	// jwplayer.onComplete(function(){
-	// 	$('.hidden-videos').fadeOut();
-	// });
 });
 
 function draw(ctx) {
