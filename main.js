@@ -31,180 +31,201 @@ $(function(){
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 
-	$.preload('img/icons/Market.png',
-		'img/icons/Fabrication.png',
-		'img/icons/Welding.png',
-		'img/icons/Finishing.png',
-		'img/icons/Electrical.png',
-		'img/icons/eCommerce.png',
-		'img/icons/Company.png',
-		'img/icons/Distribution.png',
-		'img/icons/Quality.png',
-		'img/icons/Engineering.png',
-		'img/icons/IT.png','img/bug_scaled2_revised.png').done(function(){
-			ctx.font = "16px ITCAvantGardeStd-Demi";
-			draw(ctx);
+	
+	var getQueryVariable = function(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split('&');
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split('=');
+			if (decodeURIComponent(pair[0]) == variable) {
+				return decodeURIComponent(pair[1]);
+			}
+		}
+	};
+
+	var testing = getQueryVariable("testing");
+	console.log(testing);
+
+	if(Modernizr.canvas && testing === undefined){
+		$('.ie8-menu').remove();
+		$.preload('img/icons/Market.png',
+			'img/icons/Fabrication.png',
+			'img/icons/Welding.png',
+			'img/icons/Finishing.png',
+			'img/icons/Electrical.png',
+			'img/icons/eCommerce.png',
+			'img/icons/Company.png',
+			'img/icons/Distribution.png',
+			'img/icons/Quality.png',
+			'img/icons/Engineering.png',
+			'img/icons/IT.png','img/bug_scaled2_revised.png').done(function(){
+				ctx.font = "16px ITCAvantGardeStd-Demi";
+				draw(ctx);
+			});
+
+		canvas.addEventListener('click',function(e){
+			var x = e.x;
+			var y = e.y - 50;
+			// var x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - canvas.offsetLeft;
+			// var y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - canvas.offsetTop;
+
+			// Check Quality
+			ctx.beginPath();
+			ctx.moveTo(245.7, 400.8);
+			ctx.lineTo(54.0, 400.8);
+			ctx.lineTo(54.0, 486.0);
+			ctx.lineTo(245.7, 486.0);
+			ctx.lineTo(245.7, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('quality');
+				return;
+			}
+
+			// Check Electrical
+			ctx.beginPath();
+			ctx.moveTo(629.1, 486.0);
+			ctx.lineTo(437.4, 486.0);
+			ctx.lineTo(437.4, 400.8);
+			ctx.lineTo(629.1, 400.8);
+			ctx.lineTo(629.1, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('electrical');
+				return;
+			}
+
+			// Check Welding
+			ctx.beginPath();
+			ctx.moveTo(437.4, 422.1);
+			ctx.lineTo(245.7, 422.1);
+			ctx.lineTo(245.7, 209.1);
+			ctx.lineTo(437.4, 209.1);
+			ctx.lineTo(437.4, 422.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('video');
+				return;
+			}
+
+			// Check Distribution
+			ctx.beginPath();
+			ctx.moveTo(906.0, 486.0);
+			ctx.lineTo(671.7, 486.0);
+			ctx.lineTo(671.7, 336.9);
+			ctx.lineTo(906.0, 336.9);
+			ctx.lineTo(906.0, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('distribution');
+				return;
+			}
+
+			// Check Finishing
+			ctx.beginPath();
+			ctx.moveTo(629.1, 400.8);
+			ctx.lineTo(437.4, 400.8);
+			ctx.lineTo(437.4, 209.1);
+			ctx.lineTo(629.1, 209.1);
+			ctx.lineTo(629.1, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('distribution');
+				return;
+			}
+
+			// Check Company
+			ctx.beginPath();
+			ctx.moveTo(437.4, 486.0);
+			ctx.lineTo(245.7, 486.0);
+			ctx.lineTo(245.7, 422.1);
+			ctx.lineTo(437.4, 422.1);
+			ctx.lineTo(437.4, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('company');
+				return;
+			}
+
+			// Check eCommerce
+			ctx.beginPath();
+			ctx.moveTo(906.0, 209.1);
+			ctx.lineTo(671.7, 209.1);
+			ctx.lineTo(671.7, 273.0);
+			ctx.lineTo(906.0, 273.0);
+			ctx.lineTo(906.0, 209.1);
+			ctx.closePath();
+			console.log(x);
+			console.log(y);
+			if(ctx.isPointInPath(x, y)){
+				playVideo('ecomm');
+				return;
+			}
+
+			// Check IT
+			ctx.moveTo(906.0, 273.1);
+			ctx.lineTo(671.7, 273.1);
+			ctx.lineTo(671.7, 336.9);
+			ctx.lineTo(906.0, 336.9);
+			ctx.lineTo(906.0, 273.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('it');
+				return;
+			}
+
+			// Check Market
+			ctx.beginPath();
+			ctx.moveTo(181.8, 400.8);
+			ctx.lineTo(54.0, 400.8);
+			ctx.lineTo(54.0, 358.3);
+			ctx.lineTo(181.8, 358.3);
+			ctx.lineTo(181.8, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('market');
+				return;
+			}
+
+			// Check Fabrication
+			ctx.beginPath();
+			ctx.moveTo(160.5, 166.5);
+			ctx.lineTo(160.5, 273.1);
+			ctx.lineTo(54.0, 273.1);
+			ctx.lineTo(54.0, 358.3);
+			ctx.lineTo(181.8, 358.3);
+			ctx.lineTo(181.8, 400.8);
+			ctx.lineTo(245.7, 400.8);
+			ctx.lineTo(245.7, 166.5);
+			ctx.lineTo(160.5, 166.5);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('fabrication');
+				return;
+			}
+
+			// Check Engineering
+			ctx.beginPath();
+			ctx.moveTo(906.0, 102.6);
+			ctx.lineTo(671.7, 102.6);
+			ctx.lineTo(671.7, 166.5);
+			ctx.lineTo(906.0, 166.5);
+			ctx.lineTo(906.0, 102.6);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('engineering');
+				return;
+			}
 		});
-
-	canvas.addEventListener('click',function(e){
-		var x = e.x;
-		var y = e.y - 50;
-		// var x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - canvas.offsetLeft;
-		// var y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - canvas.offsetTop;
-
-		// Check Quality
-		ctx.beginPath();
-		ctx.moveTo(245.7, 400.8);
-		ctx.lineTo(54.0, 400.8);
-		ctx.lineTo(54.0, 486.0);
-		ctx.lineTo(245.7, 486.0);
-		ctx.lineTo(245.7, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('quality');
-			return;
-		}
-
-		// Check Electrical
-		ctx.beginPath();
-		ctx.moveTo(629.1, 486.0);
-		ctx.lineTo(437.4, 486.0);
-		ctx.lineTo(437.4, 400.8);
-		ctx.lineTo(629.1, 400.8);
-		ctx.lineTo(629.1, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('electrical');
-			return;
-		}
-
-		// Check Welding
-		ctx.beginPath();
-		ctx.moveTo(437.4, 422.1);
-		ctx.lineTo(245.7, 422.1);
-		ctx.lineTo(245.7, 209.1);
-		ctx.lineTo(437.4, 209.1);
-		ctx.lineTo(437.4, 422.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('video');
-			return;
-		}
-
-		// Check Distribution
-		ctx.beginPath();
-		ctx.moveTo(906.0, 486.0);
-		ctx.lineTo(671.7, 486.0);
-		ctx.lineTo(671.7, 336.9);
-		ctx.lineTo(906.0, 336.9);
-		ctx.lineTo(906.0, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('distribution');
-			return;
-		}
-
-		// Check Finishing
-		ctx.beginPath();
-		ctx.moveTo(629.1, 400.8);
-		ctx.lineTo(437.4, 400.8);
-		ctx.lineTo(437.4, 209.1);
-		ctx.lineTo(629.1, 209.1);
-		ctx.lineTo(629.1, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('distribution');
-			return;
-		}
-
-		// Check Company
-		ctx.beginPath();
-		ctx.moveTo(437.4, 486.0);
-		ctx.lineTo(245.7, 486.0);
-		ctx.lineTo(245.7, 422.1);
-		ctx.lineTo(437.4, 422.1);
-		ctx.lineTo(437.4, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('company');
-			return;
-		}
-
-		// Check eCommerce
-		ctx.beginPath();
-		ctx.moveTo(906.0, 209.1);
-		ctx.lineTo(671.7, 209.1);
-		ctx.lineTo(671.7, 273.0);
-		ctx.lineTo(906.0, 273.0);
-		ctx.lineTo(906.0, 209.1);
-		ctx.closePath();
-		console.log(x);
-		console.log(y);
-		if(ctx.isPointInPath(x, y)){
-			playVideo('ecomm');
-			return;
-		}
-
-		// Check IT
-		ctx.moveTo(906.0, 273.1);
-		ctx.lineTo(671.7, 273.1);
-		ctx.lineTo(671.7, 336.9);
-		ctx.lineTo(906.0, 336.9);
-		ctx.lineTo(906.0, 273.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('it');
-			return;
-		}
-
-		// Check Market
-		ctx.beginPath();
-		ctx.moveTo(181.8, 400.8);
-		ctx.lineTo(54.0, 400.8);
-		ctx.lineTo(54.0, 358.3);
-		ctx.lineTo(181.8, 358.3);
-		ctx.lineTo(181.8, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('market');
-			return;
-		}
-
-		// Check Fabrication
-		ctx.beginPath();
-		ctx.moveTo(160.5, 166.5);
-		ctx.lineTo(160.5, 273.1);
-		ctx.lineTo(54.0, 273.1);
-		ctx.lineTo(54.0, 358.3);
-		ctx.lineTo(181.8, 358.3);
-		ctx.lineTo(181.8, 400.8);
-		ctx.lineTo(245.7, 400.8);
-		ctx.lineTo(245.7, 166.5);
-		ctx.lineTo(160.5, 166.5);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('fabrication');
-			return;
-		}
-
-		// Check Engineering
-		ctx.beginPath();
-		ctx.moveTo(906.0, 102.6);
-		ctx.lineTo(671.7, 102.6);
-		ctx.lineTo(671.7, 166.5);
-		ctx.lineTo(906.0, 166.5);
-		ctx.lineTo(906.0, 102.6);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('engineering');
-			return;
-		}
-	});
+	}else{
+		$('.modern-display').remove();
+	}
 
 	var completeHandler = function(){
 		$('.hidden-videos').fadeOut();
 	};
 
+	// JW Handlers
 	jwplayer("company").setup({
 		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
 		sources:[{
@@ -635,6 +656,26 @@ $(function(){
 		width:960,
 		height:540,
 	}).onComplete(completeHandler);
+
+	$(document).on('click','.map-item',function(e){
+		if(e.preventDefault){
+			e.preventDefault();
+		}
+		var name = $(this).data('name');
+		$('#'+name).fadeIn();
+		$('.hidden-videos').fadeIn();
+		jwplayer(name).play();
+		$('.jwplayer').css({
+			'width':'725px',
+			'height':'408px'
+		});
+	});
+
+	var playVideo = function(name){
+		$('#'+name).fadeIn();
+		$('.hidden-videos').fadeIn();
+		jwplayer(name).play();
+	};
 
 });
 
@@ -3686,11 +3727,4 @@ function draw(ctx) {
 
 	// iconsAndText/Guide
 	ctx.restore();
-}
-
-function playVideo(name){
-	$('#'+name).fadeIn();
-	$('.hidden-videos').fadeIn();
-	$('#'+name).attr('controls','controls');
-	jwplayer(name).play();
 }

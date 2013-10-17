@@ -44,9 +44,6 @@ p.title{
 	left: 0;
 	z-index: 1;
 }
-/*.jwplayer#ecomm,.jwplayer#company,#company_wrapper{
-	display: none;
-}*/
 
 .inside_curt .jw-video{
 	display:none;
@@ -57,4 +54,62 @@ p.title{
 	left: 0;
 }
 
-.vjs-default-skin .vjs-control-bar { font-size: 75% }
+.ie8-menu{
+	width:960px;
+}
+
+.ie8-menu .menu{
+	width: 234px;
+	background: black;
+	height: 100%;
+	min-height: 337px;
+	float: left;
+	border-right: 1px solid #acadb1;
+}
+
+.ie8-menu .menu ul{
+	padding: 0;
+	margin: 0;
+}
+
+.ie8-menu .menu ul li{
+	border-bottom: 1px solid #acadb1;
+}
+
+.ie8-menu .menu ul li:last-child{
+	border-bottom: none;
+}
+
+.ie8-menu .menu ul li a{
+	color: #e3e3e5;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	font-size:12px;
+	font-family: 'ITCAvantGardeStd-Demi';
+}
+
+.ie8-menu .menu ul li a img{
+	width: 32px;
+	vertical-align: middle;
+	margin: 3px 4px;
+}
+
+.ie8-menu .menu ul li a:hover, .ie8-menu .menu ul li.active a{
+	background:#acadb1;
+	color:black;
+}
+
+.ie8-menu .map{
+	float:right;
+}
+
+.ie8-menu .map .jwplayer{
+	width:725px !important;
+	height:408px !important;
+	float:right;
+}
+
+.ie8-menu .map img.curt-layout{
+	width: 725px;
+}

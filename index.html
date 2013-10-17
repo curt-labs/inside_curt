@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<title>Inside CURT</title>
 		<link rel="stylesheet" href="main.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	</head>
 	<body>
@@ -11,20 +12,111 @@
 
 		<div id="canvas2" width="960" height="540"></div>
 		<div class="inside_curt">
-			<div class="hidden-videos">
-				<div class="jw-video" id="ecomm"></div>
-				<div class="jw-video" id="fabrication"></div>
-				<div class="jw-video" id="quality"></div>
-				<div class="jw-video" id="electrical"></div>
-				<div class="jw-video" id="welding"></div>
-				<div class="jw-video" id="distribution"></div>
-				<div class="jw-video" id="finishing"></div>
-				<div class="jw-video" id="company"></div>
-				<div class="jw-video" id="it"></div>
-				<div class="jw-video" id="market"></div>
-				<div class="jw-video" id="engineering"></div>
+			<div class="modern-display">
+				<div class="hidden-videos">
+					<div class="jw-video" id="ecomm"></div>
+					<div class="jw-video" id="fabrication"></div>
+					<div class="jw-video" id="quality"></div>
+					<div class="jw-video" id="electrical"></div>
+					<div class="jw-video" id="welding"></div>
+					<div class="jw-video" id="distribution"></div>
+					<div class="jw-video" id="finishing"></div>
+					<div class="jw-video" id="company"></div>
+					<div class="jw-video" id="it"></div>
+					<div class="jw-video" id="market"></div>
+					<div class="jw-video" id="engineering"></div>
+				</div>
+				<canvas id="canvas" width="960" height="540"></canvas>
 			</div>
-			<canvas id="canvas" width="960" height="540"></canvas>
+
+			<div class="ie8-menu">
+				<div class="menu">
+					<ul>
+						<li>
+							<a href="#" class="map-item" data-name="market">
+								<img src="img/icons/Market.png" alt="First to Market">
+								First to Market
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="fabrication">
+								<img src="img/icons/Fabrication.png" alt="Fabrication">
+								Fabrication
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="welding">
+								<img src="img/icons/welding.png" alt="Welding">
+								Welding
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="finishing">
+								<img src="img/icons/finishing.png" alt="Finishing">
+								Finishing
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="electrical">
+								<img src="img/icons/electrical.png" alt="Electrical">
+								Electrical
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="ecomm">
+								<img src="img/icons/eCommerce.png" alt="eCommerce">
+								eCommerce
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="company">
+								<img src="img/icons/Company.png" alt="Company Vision">
+								Company Vision
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="distribution">
+								<img src="img/icons/distribution.png" alt="Distribution">
+								Distribution
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="quality">
+								<img src="img/icons/quality.png" alt="Quality">
+								Quality
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="engineering">
+								<img src="img/icons/engineering.png" alt="Engineering">
+								Engineering
+							</a>
+						</li>
+						<li>
+							<a href="#" class="map-item" data-name="it">
+								<img src="img/icons/IT.png" alt="Information Technology">
+								<span>Information Technology</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="map">
+					<img src="img/map.jpg" alt="CURT Manufacturing, LLC" class="curt-layout">
+					<div class="hidden-videos">
+						<div class="jw-video" id="ecomm"></div>
+						<div class="jw-video" id="fabrication"></div>
+						<div class="jw-video" id="quality"></div>
+						<div class="jw-video" id="electrical"></div>
+						<div class="jw-video" id="welding"></div>
+						<div class="jw-video" id="distribution"></div>
+						<div class="jw-video" id="finishing"></div>
+						<div class="jw-video" id="company"></div>
+						<div class="jw-video" id="it"></div>
+						<div class="jw-video" id="market"></div>
+						<div class="jw-video" id="engineering"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<img alt="Linked File" id="image0" style="display: none" src="img/icons/Market.png" />
