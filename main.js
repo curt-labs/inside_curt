@@ -104,7 +104,7 @@ $(function(){
 			ctx.lineTo(437.4, 422.1);
 			ctx.closePath();
 			if(ctx.isPointInPath(x, y)){
-				playVideo('video');
+				playVideo('welding');
 				return;
 			}
 
@@ -130,7 +130,7 @@ $(function(){
 			ctx.lineTo(629.1, 400.8);
 			ctx.closePath();
 			if(ctx.isPointInPath(x, y)){
-				playVideo('distribution');
+				playVideo('finishing');
 				return;
 			}
 
