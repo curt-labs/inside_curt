@@ -27,6 +27,7 @@
 
 $(function(){
 
+	// jwplayer.key = "ABCDEFGHIJKLMOPQ";
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 
@@ -199,8 +200,66 @@ $(function(){
 			return;
 		}
 	});
-	
-	VideoJS.setupAllWhenReady();
+
+	jwplayer("ecomm").setup({
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.jpg",
+		sources:[{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.webm",
+			label:"1080 HD"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.ogv",
+			label:"1080 HD"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.mp4",
+			label:"1080 HD"
+		}],
+		width:960,
+		height:540
+	});
+
+	jwplayer("company").setup({
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		sources:[{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			label:"360"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			label:"360"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			label:"360"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			label:"480 SD"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			label:"480 SD"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			label:"480 SD"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			label:"720"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			label:"720"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			label:"720"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			label:"1080 HD"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			label:"1080 HD"
+		},{
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			label:"1080 HD"
+		}],
+		primary:'webm',
+		width:960,
+		height:540,
+	});
 });
 
 function draw(ctx) {
@@ -3254,15 +3313,9 @@ function draw(ctx) {
 }
 
 function playVideo(name){
-	var vid = $('#'+name).get()[0];
 	$('#'+name).fadeIn();
+	$('.hidden-videos').fadeIn();
 	$('#'+name).addClass('video-js');
 	$('#'+name).attr('controls','controls');
-	$('#canvas').fadeOut();
-	vid.load();
-	vid.play();
-	vid.onended = function(e){
-		$('#'+name).fadeOut();
-		$('#canvas').fadeIn();
-	};
+	jwplayer(name).play();
 }

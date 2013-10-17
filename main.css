@@ -22,7 +22,29 @@ p.title{
 	position: relative;
 }
 
-.inside_curt video{
+.hidden-videos{
+	display: none;
+	height:540px;
+	width:960px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#canvas{
+	height:540px;
+	width:960px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.jwplayer#ecomm,.jwplayer#company,#company_wrapper{
+	display: none;
+}
+
+.inside_curt .jw-video{
 	display:none;
 	width:960px;
 	height:540px;

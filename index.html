@@ -4,76 +4,28 @@
 		<meta charset="UTF-8" />
 		<title>Inside CURT</title>
 		<link rel="stylesheet" href="main.css">
-		<link rel="stylesheet" href="video-js/video-js.css">
-		<link rel="stylesheet" href="video-js/vimeo.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		
 	</head>
 	<body>
 		<p class="title">Inside CURT</p>
 
 		<div id="canvas2" width="960" height="540"></div>
 		<div class="inside_curt">
-			<video id="ecomm" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/eCom/eCom.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/eCom/eCom.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/eCom/eCom.ogv" type="video/ogg"></source>
-			</video>
-			<video id="fabrication" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Fabrication/Fabrication.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Fabrication/Fabrication.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Fabrication/Fabrication.ogv" type="video/ogg"></source>
-			</video>
-			<video id="quality" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Quality/Quality.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Quality/Quality.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	Quality/Quality.ogv" type="video/ogg"></source>
-			</video>
-			<video id="electrical" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Electrical/Electrical.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Electrical/Electrical.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	Electrical/Electrical.ogv" type="video/ogg"></source>
-			</video>
-			<video id="welding" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Welding/Welding.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Welding/Welding.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	Welding/Welding.ogv" type="video/ogg"></source>
-			</video>
-			<video id="distribution" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Distribution/Distribution.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Distribution/Distribution.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	Distribution/Distribution.ogv" type="video/ogg"></source>
-			</video>
-			<video id="finishing" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Finishing/Finishing.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Finishing/Finishing.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	Finishing/Finishing.ogv" type="video/ogg"></source>
-			</video>
-			<video id="company" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/CompanyVision/CompanyVision.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/CompanyVision/CompanyVision.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	CompanyVision/CompanyVision.ogv" type="video/ogg"></source>
-			</video>
-			<video id="it" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/IT/IT.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/IT/IT.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	IT/IT.ogv" type="video/ogg"></source>
-			</video>
-			<video id="market" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/First_to_Market/First_to_Market.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/First_to_Market/First_to_Market.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	First_to_Market/First_to_Market.ogv" type="video/ogg"></source>
-			</video>
-			<video id="engineering" preload>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Engineering/Engineering.webm" type="video/webm"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/Engineering/Engineering.mp4" type="video/mp4"></source>
-				<source src="http://commondatastorage.googleapis.com/curt-video/Inside_CURT_2013/	Engineering/Engineering.ogv" type="video/ogg"></source>
-			</video>
-			
+			<div class="hidden-videos">
+				<div class="jw-video" id="ecomm"></div>
+				<div class="jw-video" id="fabrication"></div>
+				<div class="jw-video" id="quality"></div>
+				<div class="jw-video" id="electrical"></div>
+				<div class="jw-video" id="welding"></div>
+				<div class="jw-video" id="distribution"></div>
+				<div class="jw-video" id="finishing"></div>
+				<div class="jw-video" id="company"></div>
+				<div class="jw-video" id="it"></div>
+				<div class="jw-video" id="market"></div>
+				<div class="jw-video" id="engineering"></div>
+			</div>
 			<canvas id="canvas" width="960" height="540"></canvas>
 		</div>
-
-		<p class="current"></p>
 
 		<img alt="Linked File" id="image0" style="display: none" src="img/icons/Market.png" />
 		<img alt="Linked File" id="image1" style="display: none" src="img/icons/Fabrication.png" />
@@ -87,8 +39,8 @@
 		<img alt="Linked File" id="image9" style="display: none" src="img/icons/Engineering.png" />
 		<img alt="Linked File" id="image10" style="display: none" src="img/icons/IT.png" />
 		<img alt="Linked File" id="image11" style="display: none" src="img/bug_scaled2_revised.png" />
-		
-		<script src="video-js/video-js.js"></script>
+
+		<script src="jwplayer/jwplayer.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>
