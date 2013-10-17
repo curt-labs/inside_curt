@@ -102,12 +102,25 @@ p.title{
 
 .ie8-menu .map{
 	float:right;
+	position: relative;
+}
+
+.ie8-menu .map .hidden-videos{
+	width: 725px !important;
+	height:408px !important;
+	position: absolute;
+	z-index: 10;
 }
 
 .ie8-menu .map .jwplayer{
 	width:725px !important;
 	height:408px !important;
 	float:right;
+}
+
+.ie8-menu .map .jwplayer.jwfullscreen{
+	width:auto !important;
+	height:auto !important;
 }
 
 .ie8-menu .map img.curt-layout{

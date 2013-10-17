@@ -661,14 +661,14 @@ $(function(){
 		if(e.preventDefault){
 			e.preventDefault();
 		}
+
+		$('.ie8-menu .menu li').removeClass('active');
+		$(this).parent().addClass('active');
 		var name = $(this).data('name');
+		$('.jwplayer').hide();
 		$('#'+name).fadeIn();
 		$('.hidden-videos').fadeIn();
 		jwplayer(name).play();
-		$('.jwplayer').css({
-			'width':'725px',
-			'height':'408px'
-		});
 	});
 
 	var playVideo = function(name){
