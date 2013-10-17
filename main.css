@@ -32,6 +32,10 @@ p.title{
 	z-index: 10;
 }
 
+.hidden-videos .jwplayer{
+	display: none;
+}
+
 #canvas{
 	height:540px;
 	width:960px;
@@ -40,9 +44,9 @@ p.title{
 	left: 0;
 	z-index: 1;
 }
-.jwplayer#ecomm,.jwplayer#company,#company_wrapper{
+/*.jwplayer#ecomm,.jwplayer#company,#company_wrapper{
 	display: none;
-}
+}*/
 
 .inside_curt .jw-video{
 	display:none;
