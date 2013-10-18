@@ -42,37 +42,6 @@ $(function(){
 		}
 	};
 
-	var testing = getQueryVariable("testing");
-	if(Modernizr.canvas && testing === undefined){
-		$('.ie8-menu').remove();
-		$.preload('img/icons/Market.png',
-			'img/icons/Fabrication.png',
-			'img/icons/Welding.png',
-			'img/icons/Finishing.png',
-			'img/icons/Electrical.png',
-			'img/icons/eCommerce.png',
-			'img/icons/Company.png',
-			'img/icons/Distribution.png',
-			'img/icons/Quality.png',
-			'img/icons/Engineering.png',
-			'img/icons/IT.png','img/bug_scaled2_revised.png').done(function(){
-				ctx.font = "16px ITCAvantGardeStd-Demi";
-				draw(ctx);
-			});
-
-		canvas.addEventListener('click',canvasHandler);
-		canvas.addEventListener('touchmove',canvasHandler);
-		// $(document).on('touchmove','#canvas', function(e){
-		// 	canvasHandler(e);
-		// });
-	}else{
-		$('.modern-display').remove();
-	}
-
-	var completeHandler = function(){
-		$('.hidden-videos').fadeOut();
-	};
-
 	var canvasHandler = function(e){
 		var x = e.x;
 		var y = e.y - 50;
@@ -224,6 +193,34 @@ $(function(){
 			playVideo('engineering');
 			return;
 		}
+	};
+
+	var testing = getQueryVariable("testing");
+	if(Modernizr.canvas && testing === undefined){
+		$('.ie8-menu').remove();
+		$.preload('img/icons/Market.png',
+			'img/icons/Fabrication.png',
+			'img/icons/Welding.png',
+			'img/icons/Finishing.png',
+			'img/icons/Electrical.png',
+			'img/icons/eCommerce.png',
+			'img/icons/Company.png',
+			'img/icons/Distribution.png',
+			'img/icons/Quality.png',
+			'img/icons/Engineering.png',
+			'img/icons/IT.png','img/bug_scaled2_revised.png').done(function(){
+				ctx.font = "16px ITCAvantGardeStd-Demi";
+				draw(ctx);
+			});
+
+		canvas.addEventListener('click',canvasHandler);
+		canvas.addEventListener('touchmove',canvasHandler);
+	}else{
+		$('.modern-display').remove();
+	}
+
+	var completeHandler = function(){
+		$('.hidden-videos').fadeOut();
 	};
 
 	// JW Handlers
