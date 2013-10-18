@@ -29,7 +29,6 @@ $(function(){
 
 	jwplayer.key = "amS3PbnniWTmea1rfXkUiUweZYSV5JjaQ3M9+A==";
 	var canvas = document.getElementById("canvas");
-	var ctx = canvas.getContext("2d");
 
 	var getQueryVariable = function(variable) {
 		var query = window.location.search.substring(1);
@@ -197,6 +196,7 @@ $(function(){
 
 	var testing = getQueryVariable("testing");
 	if(Modernizr.canvas && testing === undefined){
+		var ctx = canvas.getContext("2d");
 		$('.ie8-menu').remove();
 		$.preload('img/icons/Market.png',
 			'img/icons/Fabrication.png',
