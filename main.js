@@ -31,7 +31,6 @@ $(function(){
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 
-	
 	var getQueryVariable = function(variable) {
 		var query = window.location.search.substring(1);
 		var vars = query.split('&');
@@ -44,8 +43,6 @@ $(function(){
 	};
 
 	var testing = getQueryVariable("testing");
-	console.log(testing);
-
 	if(Modernizr.canvas && testing === undefined){
 		$('.ie8-menu').remove();
 		$.preload('img/icons/Market.png',
@@ -66,9 +63,7 @@ $(function(){
 		canvas.addEventListener('click',function(e){
 			var x = e.x;
 			var y = e.y - 50;
-			// var x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - canvas.offsetLeft;
-			// var y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - canvas.offsetTop;
-
+			
 			// Check Quality
 			ctx.beginPath();
 			ctx.moveTo(245.7, 400.8);
@@ -267,394 +262,394 @@ $(function(){
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("ecomm").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/eCom/eCom_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("fabrication").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Fabrication/Fabrication_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("quality").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Quality/Quality_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("electrical").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Electrical/Electrical_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("welding").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Welding/Welding_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("distribution").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Distribution/Distribution_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("it").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/IT/IT_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("market").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/First_to_Market/First_to_Market_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 	jwplayer("engineering").setup({
-		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
+		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Company_Vision_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_720.mp4",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_1080.webm",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_1080.ogv",
 			label:"1080 HD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/Engineering/Engineering_1080.mp4",
 			label:"1080 HD"
 		}],
 		primary:'webm',
 		width:960,
-		height:540,
+		height:540
 	}).onComplete(completeHandler);
 
 	$(document).on('click','.map-item',function(e){
@@ -672,6 +667,7 @@ $(function(){
 	});
 
 	var playVideo = function(name){
+		$('.jwplayer').hide();
 		$('#'+name).fadeIn();
 		$('.hidden-videos').fadeIn();
 		jwplayer(name).play();
