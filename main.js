@@ -61,9 +61,7 @@ $(function(){
 			});
 
 		canvas.addEventListener('click',canvasHandler);
-		canvas.addEventListener('touchmove',function(e){
-			canvasHandler(e);
-		}, true);
+		canvas.addEventListener('touchmove',canvasHandler);
 		// $(document).on('touchmove','#canvas', function(e){
 		// 	canvasHandler(e);
 		// });
