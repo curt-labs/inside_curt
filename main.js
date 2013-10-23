@@ -27,6 +27,7 @@
 
 $(function(){
 
+	var currentVideo = '';
 	jwplayer.key = "amS3PbnniWTmea1rfXkUiUweZYSV5JjaQ3M9+A==";
 	var canvas = document.getElementById("canvas");
 
@@ -198,17 +199,17 @@ $(function(){
 	if(Modernizr.canvas && testing === undefined){
 		var ctx = canvas.getContext("2d");
 		$('.ie8-menu').remove();
-		$.preload('img/icons/Market.png',
-			'img/icons/Fabrication.png',
-			'img/icons/Welding.png',
-			'img/icons/Finishing.png',
-			'img/icons/Electrical.png',
-			'img/icons/eCommerce.png',
-			'img/icons/Company.png',
-			'img/icons/Distribution.png',
-			'img/icons/Quality.png',
-			'img/icons/Engineering.png',
-			'img/icons/IT.png','img/bug_scaled2_revised.png').done(function(){
+		$.preload('//curt-labs.github.io/inside_curt/img/icons/Market.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Fabrication.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Welding.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Finishing.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Electrical.png',
+			'//curt-labs.github.io/inside_curt/img/icons/eCommerce.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Company.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Distribution.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Quality.png',
+			'//curt-labs.github.io/inside_curt/img/icons/Engineering.png',
+			'//curt-labs.github.io/inside_curt/img/icons/IT.png','//curt-labs.github.io/inside_curt/img/bug_scaled2_revised.png').done(function(){
 				ctx.font = "16px ITCAvantGardeStd-Demi";
 				draw(ctx);
 			});
@@ -221,6 +222,15 @@ $(function(){
 
 	var completeHandler = function(){
 		$('.hidden-videos').fadeOut();
+		$('.return-to-menu').hide();
+	};
+	var playVideo = function(name){
+		currentVideo = name;
+		$('.jwplayer').hide();
+		$('#'+name).fadeIn();
+		$('.hidden-videos').fadeIn();
+		$('.return-to-menu').css('display','block');
+		jwplayer(name).play();
 	};
 
 	// JW Handlers
@@ -668,13 +678,13 @@ $(function(){
 		$('.hidden-videos').fadeIn();
 		jwplayer(name).play();
 	});
-
-	var playVideo = function(name){
-		$('.jwplayer').hide();
-		$('#'+name).fadeIn();
-		$('.hidden-videos').fadeIn();
-		jwplayer(name).play();
-	};
+	$(document).on('click','.return-to-menu',function(e){
+		if(e.preventDefault){
+			e.preventDefault();
+		}
+		jwplayer(currentVideo).stop();
+		completeHandler();
+	})
 
 });
 
