@@ -198,6 +198,8 @@ $(function(){
 	var testing = getQueryVariable("testing");
 	if(Modernizr.canvas && testing === undefined){
 		var ctx = canvas.getContext("2d");
+		canvas.width = 960;
+		canvas.height = 540;
 		$('.ie8-menu').remove();
 		$.preload('//curt-labs.github.io/inside_curt/img/icons/Market.png',
 			'//curt-labs.github.io/inside_curt/img/icons/Fabrication.png',
@@ -274,7 +276,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("ecomm").setup({
@@ -317,7 +319,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("fabrication").setup({
@@ -360,7 +362,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("quality").setup({
@@ -403,7 +405,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("electrical").setup({
@@ -446,7 +448,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("welding").setup({
@@ -489,7 +491,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("distribution").setup({
@@ -532,7 +534,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("it").setup({
@@ -575,7 +577,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("market").setup({
@@ -618,7 +620,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 	jwplayer("engineering").setup({
@@ -661,7 +663,7 @@ $(function(){
 			label:"1080 HD"
 		}],
 		primary:'webm',
-		width:960,
+		width:880,
 		height:540
 	}).onComplete(completeHandler);
 

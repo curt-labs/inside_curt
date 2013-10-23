@@ -18,7 +18,7 @@ p.title{
 
 .inside_curt{
 	height:540px;
-	width:960px;
+	width:880px;
 	position: relative;
 }
 
@@ -39,7 +39,7 @@ p.title{
 .hidden-videos{
 	display: none;
 	height:540px;
-	width:960px;
+	width:880px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -52,7 +52,7 @@ p.title{
 
 #canvas{
 	height:540px;
-	width:960px;
+	width:880px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -61,7 +61,7 @@ p.title{
 
 .inside_curt .jw-video{
 	display:none;
-	width:960px;
+	width:880px;
 	height:540px;
 	position: absolute;
 	top: 0;
