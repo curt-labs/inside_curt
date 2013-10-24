@@ -132,8 +132,6 @@ $(function(){
 		ctx.lineTo(906.0, 273.0);
 		ctx.lineTo(906.0, 209.1);
 		ctx.closePath();
-		console.log(x);
-		console.log(y);
 		if(ctx.isPointInPath(x, y)){
 			playVideo('ecomm');
 			return;
