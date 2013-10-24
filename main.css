@@ -115,20 +115,27 @@ p.title{
 }
 
 .ie8-menu .map{
-	float:right;
+	float:left;
 	position: relative;
 }
 
 .ie8-menu .map .hidden-videos{
-	width: 725px !important;
-	height:408px !important;
+	width: 646px !important;
+	height:455px !important;
 	position: absolute;
 	z-index: 10;
 }
 
+.ie8-menu .map .hidden-videos > div{
+	/*width:725px !important;
+	height:408px !important;*/
+	width:100% !important;
+	height:100% !important;
+}
+
 .ie8-menu .map .jwplayer{
-	width:725px !important;
-	height:408px !important;
+	width:646px !important;
+	height:455px !important;
 	float:right;
 }
 
@@ -138,5 +145,6 @@ p.title{
 }
 
 .ie8-menu .map img.curt-layout{
-	width: 725px;
+	width: 646px;
+	height:455px;
 }

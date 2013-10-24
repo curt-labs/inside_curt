@@ -674,7 +674,8 @@ $(function(){
 		$(this).parent().addClass('active');
 		var name = $(this).data('name');
 		$('.jwplayer').hide();
-		$('#'+name).fadeIn();
+		$('.hidden-videos [id$=_wrapper]').hide();
+		$('#'+name+'_wrapper').fadeIn();
 		$('.hidden-videos').fadeIn();
 		jwplayer(name).play();
 	});
