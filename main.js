@@ -28,7 +28,7 @@
 $(function(){
 
 	var currentVideo = '';
-	jwplayer.key = "amS3PbnniWTmea1rfXkUiUweZYSV5JjaQ3M9+A==";
+	jwplayer.key = "OPC2BUiDVaUsMvmzlUmSz3QLYic8zWzFI/8G5Q==";
 	var canvas = document.getElementById("canvas");
 
 	var getQueryVariable = function(variable) {
