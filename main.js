@@ -44,7 +44,7 @@ $(function(){
 
 	var canvasHandler = function(e){
 		var x = e.x;
-		var y = e.y - 50;
+		var y = e.y;
 		
 		// Check Quality
 		ctx.beginPath();
