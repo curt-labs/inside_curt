@@ -43,8 +43,12 @@ $(function(){
 	};
 
 	var canvasHandler = function(e){
-		var x = e.x - 140;
-		var y = e.y - 175;
+		//var x = e.x - 140;
+		//var y = e.y - 175;
+		
+		var rect = e.currentTarget.getBoundingClientRect();
+		var x = e.clientX - rect.left;
+		var y = e.clientY - rect.top;
 		
 		// Check Quality
 		ctx.beginPath();
