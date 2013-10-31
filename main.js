@@ -241,31 +241,31 @@ $(function(){
 	jwplayer("company").setup({
 		image: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.jpg",
 		sources:[{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_360.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_360.webm",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_360.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_360.ogv",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_360.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_360.mp4",
 			label:"360"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_480.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_480.webm",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_480.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_480.ogv",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_480.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_480.mp4",
 			label:"480 SD"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_720.webm",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_720.webm",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_720.ogv",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_720.ogv",
 			label:"720"
 		},{
-			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/Finishing_720.mp4",
+			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_720.mp4",
 			label:"720"
 		},{
 			file: "http://curt-video.commondatastorage.googleapis.com/Inside_CURT_2013/CompanyVision/CompanyVision_1080.webm",
