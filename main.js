@@ -46,8 +46,12 @@ $(function(){
 		});
 
 	canvas.addEventListener('click',function(e){
-		var x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - canvas.offsetLeft;
-		var y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - canvas.offsetTop;
+		//var x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - canvas.offsetLeft;
+		//var y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop - canvas.offsetTop;
+		
+		var rect = e.currentTarget.getBoundingClientRect();
+		var x = e.clientX - rect.left;
+		var y = e.clientY - rect.top;
 
 		// Check Quality
 		ctx.beginPath();
