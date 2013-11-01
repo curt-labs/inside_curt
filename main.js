@@ -896,7 +896,7 @@ $(function(){
 
 		$('.ie8-menu .menu li').removeClass('active');
 		$(this).parent().addClass('active');
-		
+
 		jwplayer('fabrication').stop();
 		jwplayer('welding').stop();
 		jwplayer('finishing').stop();
