@@ -903,14 +903,11 @@ $(function(){
 		loadPlayer(name,function(){
 			currentVideo = name;
 			$('.jwplayer').hide();
-			//$('.curt-layout').hide();
-			console.log(name);
 			$('.hidden-videos [id$=_wrapper]').hide();
 			$('#'+name+'_wrapper, .hidden-videos, #'+name).css('display','block');
 			jwplayer(name).play();
 			$('.hidden-videos #'+name).show();
 		});
-		
 	});
 	$(document).on('click','.return-to-menu',function(e){
 		if(e.preventDefault){
