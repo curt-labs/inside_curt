@@ -896,19 +896,9 @@ $(function(){
 
 		$('.ie8-menu .menu li').removeClass('active');
 		$(this).parent().addClass('active');
-
-		jwplayer('fabrication').stop();
-		jwplayer('welding').stop();
-		jwplayer('finishing').stop();
-		jwplayer('electrical').stop();
-		jwplayer('ecomm').stop();
-		jwplayer('company').stop();
-		jwplayer('distribution').stop();
-		jwplayer('quality').stop();
-		jwplayer('engineering').stop();
-		jwplayer('it').stop();
-		jwplayer('market').stop();
-
+		if(currentVideo !== undefined && currentVideo !== ''){
+			jwplayer(currentVideo).pause().stop();
+		}
 		var name = $(this).attr('name');
 		loadPlayer(name,function(){
 			currentVideo = name;
