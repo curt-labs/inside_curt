@@ -896,7 +896,7 @@ $(function(){
 
 		$('.ie8-menu .menu li').removeClass('active');
 		$(this).parent().addClass('active');
-		if(currentVideo !== ''){
+		if(currentVideo !== undefined && currentVideo !== ''){
 			jwplayer(currentVideo).stop();
 		}
 		var name = $(this).data('name');
