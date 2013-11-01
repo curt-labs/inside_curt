@@ -42,313 +42,312 @@ $(function(){
 		}
 	};
 
-	var canvasHandler = function(e){
-		var rect = e.currentTarget.getBoundingClientRect();
-		var x = e.clientX - rect.left + 50;
-		var y = e.clientY - rect.top;
-
-		// Check Quality
-		ctx.beginPath();
-		ctx.moveTo(245.7, 400.8);
-		ctx.lineTo(54.0, 400.8);
-		ctx.lineTo(54.0, 486.0);
-		ctx.lineTo(245.7, 486.0);
-		ctx.lineTo(245.7, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('quality');
-			return;
-		}
-
-		// Check Electrical
-		ctx.beginPath();
-		ctx.moveTo(629.1, 486.0);
-		ctx.lineTo(437.4, 486.0);
-		ctx.lineTo(437.4, 400.8);
-		ctx.lineTo(629.1, 400.8);
-		ctx.lineTo(629.1, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('electrical');
-			return;
-		}
-
-		// Check Welding
-		ctx.beginPath();
-		ctx.moveTo(437.4, 422.1);
-		ctx.lineTo(245.7, 422.1);
-		ctx.lineTo(245.7, 209.1);
-		ctx.lineTo(437.4, 209.1);
-		ctx.lineTo(437.4, 422.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('welding');
-			return;
-		}
-
-		// Check Distribution
-		ctx.beginPath();
-		ctx.moveTo(906.0, 486.0);
-		ctx.lineTo(671.7, 486.0);
-		ctx.lineTo(671.7, 336.9);
-		ctx.lineTo(906.0, 336.9);
-		ctx.lineTo(906.0, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('distribution');
-			return;
-		}
-
-		// Check Finishing
-		ctx.beginPath();
-		ctx.moveTo(629.1, 400.8);
-		ctx.lineTo(437.4, 400.8);
-		ctx.lineTo(437.4, 209.1);
-		ctx.lineTo(629.1, 209.1);
-		ctx.lineTo(629.1, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('finishing');
-			return;
-		}
-
-		// Check Company
-		ctx.beginPath();
-		ctx.moveTo(437.4, 486.0);
-		ctx.lineTo(245.7, 486.0);
-		ctx.lineTo(245.7, 422.1);
-		ctx.lineTo(437.4, 422.1);
-		ctx.lineTo(437.4, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('company');
-			return;
-		}
-
-		// Check eCommerce
-		ctx.beginPath();
-		ctx.moveTo(906.0, 209.1);
-		ctx.lineTo(671.7, 209.1);
-		ctx.lineTo(671.7, 273.0);
-		ctx.lineTo(906.0, 273.0);
-		ctx.lineTo(906.0, 209.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('ecomm');
-			return;
-		}
-
-		// Check IT
-		ctx.moveTo(906.0, 273.1);
-		ctx.lineTo(671.7, 273.1);
-		ctx.lineTo(671.7, 336.9);
-		ctx.lineTo(906.0, 336.9);
-		ctx.lineTo(906.0, 273.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('it');
-			return;
-		}
-
-		// Check Market
-		ctx.beginPath();
-		ctx.moveTo(181.8, 400.8);
-		ctx.lineTo(54.0, 400.8);
-		ctx.lineTo(54.0, 358.3);
-		ctx.lineTo(181.8, 358.3);
-		ctx.lineTo(181.8, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('market');
-			return;
-		}
-
-		// Check Fabrication
-		ctx.beginPath();
-		ctx.moveTo(160.5, 166.5);
-		ctx.lineTo(160.5, 273.1);
-		ctx.lineTo(54.0, 273.1);
-		ctx.lineTo(54.0, 358.3);
-		ctx.lineTo(181.8, 358.3);
-		ctx.lineTo(181.8, 400.8);
-		ctx.lineTo(245.7, 400.8);
-		ctx.lineTo(245.7, 166.5);
-		ctx.lineTo(160.5, 166.5);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('fabrication');
-			return;
-		}
-
-		// Check Engineering
-		ctx.beginPath();
-		ctx.moveTo(906.0, 102.6);
-		ctx.lineTo(671.7, 102.6);
-		ctx.lineTo(671.7, 166.5);
-		ctx.lineTo(906.0, 166.5);
-		ctx.lineTo(906.0, 102.6);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			playVideo('engineering');
-			return;
-		}
-	};
-
-	var canvasMouseHandler = function(e){
-		var rect = e.currentTarget.getBoundingClientRect();
-		var x = e.clientX - rect.left + 50;
-		var y = e.clientY - rect.top;
-
-		// Check Quality
-		ctx.beginPath();
-		ctx.moveTo(245.7, 400.8);
-		ctx.lineTo(54.0, 400.8);
-		ctx.lineTo(54.0, 486.0);
-		ctx.lineTo(245.7, 486.0);
-		ctx.lineTo(245.7, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Electrical
-		ctx.beginPath();
-		ctx.moveTo(629.1, 486.0);
-		ctx.lineTo(437.4, 486.0);
-		ctx.lineTo(437.4, 400.8);
-		ctx.lineTo(629.1, 400.8);
-		ctx.lineTo(629.1, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Welding
-		ctx.beginPath();
-		ctx.moveTo(437.4, 422.1);
-		ctx.lineTo(245.7, 422.1);
-		ctx.lineTo(245.7, 209.1);
-		ctx.lineTo(437.4, 209.1);
-		ctx.lineTo(437.4, 422.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Distribution
-		ctx.beginPath();
-		ctx.moveTo(906.0, 486.0);
-		ctx.lineTo(671.7, 486.0);
-		ctx.lineTo(671.7, 336.9);
-		ctx.lineTo(906.0, 336.9);
-		ctx.lineTo(906.0, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Finishing
-		ctx.beginPath();
-		ctx.moveTo(629.1, 400.8);
-		ctx.lineTo(437.4, 400.8);
-		ctx.lineTo(437.4, 209.1);
-		ctx.lineTo(629.1, 209.1);
-		ctx.lineTo(629.1, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Company
-		ctx.beginPath();
-		ctx.moveTo(437.4, 486.0);
-		ctx.lineTo(245.7, 486.0);
-		ctx.lineTo(245.7, 422.1);
-		ctx.lineTo(437.4, 422.1);
-		ctx.lineTo(437.4, 486.0);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check eCommerce
-		ctx.beginPath();
-		ctx.moveTo(906.0, 209.1);
-		ctx.lineTo(671.7, 209.1);
-		ctx.lineTo(671.7, 273.0);
-		ctx.lineTo(906.0, 273.0);
-		ctx.lineTo(906.0, 209.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check IT
-		ctx.moveTo(906.0, 273.1);
-		ctx.lineTo(671.7, 273.1);
-		ctx.lineTo(671.7, 336.9);
-		ctx.lineTo(906.0, 336.9);
-		ctx.lineTo(906.0, 273.1);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Market
-		ctx.beginPath();
-		ctx.moveTo(181.8, 400.8);
-		ctx.lineTo(54.0, 400.8);
-		ctx.lineTo(54.0, 358.3);
-		ctx.lineTo(181.8, 358.3);
-		ctx.lineTo(181.8, 400.8);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Fabrication
-		ctx.beginPath();
-		ctx.moveTo(160.5, 166.5);
-		ctx.lineTo(160.5, 273.1);
-		ctx.lineTo(54.0, 273.1);
-		ctx.lineTo(54.0, 358.3);
-		ctx.lineTo(181.8, 358.3);
-		ctx.lineTo(181.8, 400.8);
-		ctx.lineTo(245.7, 400.8);
-		ctx.lineTo(245.7, 166.5);
-		ctx.lineTo(160.5, 166.5);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-
-		// Check Engineering
-		ctx.beginPath();
-		ctx.moveTo(906.0, 102.6);
-		ctx.lineTo(671.7, 102.6);
-		ctx.lineTo(671.7, 166.5);
-		ctx.lineTo(906.0, 166.5);
-		ctx.lineTo(906.0, 102.6);
-		ctx.closePath();
-		if(ctx.isPointInPath(x, y)){
-			$(e.currentTarget).css('cursor','pointer');
-			return;
-		}
-		$(e.currentTarget).css('cursor','auto');
-	};
-
 	var testing = getQueryVariable("testing");
 	if(Modernizr.canvas && testing === undefined && navigator.appName.indexOf('Microsoft') === -1){
+		var canvasHandler = function(e){
+			var rect = e.currentTarget.getBoundingClientRect();
+			var x = e.clientX - rect.left + 50;
+			var y = e.clientY - rect.top;
+
+			// Check Quality
+			ctx.beginPath();
+			ctx.moveTo(245.7, 400.8);
+			ctx.lineTo(54.0, 400.8);
+			ctx.lineTo(54.0, 486.0);
+			ctx.lineTo(245.7, 486.0);
+			ctx.lineTo(245.7, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('quality');
+				return;
+			}
+
+			// Check Electrical
+			ctx.beginPath();
+			ctx.moveTo(629.1, 486.0);
+			ctx.lineTo(437.4, 486.0);
+			ctx.lineTo(437.4, 400.8);
+			ctx.lineTo(629.1, 400.8);
+			ctx.lineTo(629.1, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('electrical');
+				return;
+			}
+
+			// Check Welding
+			ctx.beginPath();
+			ctx.moveTo(437.4, 422.1);
+			ctx.lineTo(245.7, 422.1);
+			ctx.lineTo(245.7, 209.1);
+			ctx.lineTo(437.4, 209.1);
+			ctx.lineTo(437.4, 422.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('welding');
+				return;
+			}
+
+			// Check Distribution
+			ctx.beginPath();
+			ctx.moveTo(906.0, 486.0);
+			ctx.lineTo(671.7, 486.0);
+			ctx.lineTo(671.7, 336.9);
+			ctx.lineTo(906.0, 336.9);
+			ctx.lineTo(906.0, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('distribution');
+				return;
+			}
+
+			// Check Finishing
+			ctx.beginPath();
+			ctx.moveTo(629.1, 400.8);
+			ctx.lineTo(437.4, 400.8);
+			ctx.lineTo(437.4, 209.1);
+			ctx.lineTo(629.1, 209.1);
+			ctx.lineTo(629.1, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('finishing');
+				return;
+			}
+
+			// Check Company
+			ctx.beginPath();
+			ctx.moveTo(437.4, 486.0);
+			ctx.lineTo(245.7, 486.0);
+			ctx.lineTo(245.7, 422.1);
+			ctx.lineTo(437.4, 422.1);
+			ctx.lineTo(437.4, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('company');
+				return;
+			}
+
+			// Check eCommerce
+			ctx.beginPath();
+			ctx.moveTo(906.0, 209.1);
+			ctx.lineTo(671.7, 209.1);
+			ctx.lineTo(671.7, 273.0);
+			ctx.lineTo(906.0, 273.0);
+			ctx.lineTo(906.0, 209.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('ecomm');
+				return;
+			}
+
+			// Check IT
+			ctx.moveTo(906.0, 273.1);
+			ctx.lineTo(671.7, 273.1);
+			ctx.lineTo(671.7, 336.9);
+			ctx.lineTo(906.0, 336.9);
+			ctx.lineTo(906.0, 273.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('it');
+				return;
+			}
+
+			// Check Market
+			ctx.beginPath();
+			ctx.moveTo(181.8, 400.8);
+			ctx.lineTo(54.0, 400.8);
+			ctx.lineTo(54.0, 358.3);
+			ctx.lineTo(181.8, 358.3);
+			ctx.lineTo(181.8, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('market');
+				return;
+			}
+
+			// Check Fabrication
+			ctx.beginPath();
+			ctx.moveTo(160.5, 166.5);
+			ctx.lineTo(160.5, 273.1);
+			ctx.lineTo(54.0, 273.1);
+			ctx.lineTo(54.0, 358.3);
+			ctx.lineTo(181.8, 358.3);
+			ctx.lineTo(181.8, 400.8);
+			ctx.lineTo(245.7, 400.8);
+			ctx.lineTo(245.7, 166.5);
+			ctx.lineTo(160.5, 166.5);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('fabrication');
+				return;
+			}
+
+			// Check Engineering
+			ctx.beginPath();
+			ctx.moveTo(906.0, 102.6);
+			ctx.lineTo(671.7, 102.6);
+			ctx.lineTo(671.7, 166.5);
+			ctx.lineTo(906.0, 166.5);
+			ctx.lineTo(906.0, 102.6);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				playVideo('engineering');
+				return;
+			}
+		};
+
+		var canvasMouseHandler = function(e){
+			var rect = e.currentTarget.getBoundingClientRect();
+			var x = e.clientX - rect.left + 50;
+			var y = e.clientY - rect.top;
+
+			// Check Quality
+			ctx.beginPath();
+			ctx.moveTo(245.7, 400.8);
+			ctx.lineTo(54.0, 400.8);
+			ctx.lineTo(54.0, 486.0);
+			ctx.lineTo(245.7, 486.0);
+			ctx.lineTo(245.7, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Electrical
+			ctx.beginPath();
+			ctx.moveTo(629.1, 486.0);
+			ctx.lineTo(437.4, 486.0);
+			ctx.lineTo(437.4, 400.8);
+			ctx.lineTo(629.1, 400.8);
+			ctx.lineTo(629.1, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Welding
+			ctx.beginPath();
+			ctx.moveTo(437.4, 422.1);
+			ctx.lineTo(245.7, 422.1);
+			ctx.lineTo(245.7, 209.1);
+			ctx.lineTo(437.4, 209.1);
+			ctx.lineTo(437.4, 422.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Distribution
+			ctx.beginPath();
+			ctx.moveTo(906.0, 486.0);
+			ctx.lineTo(671.7, 486.0);
+			ctx.lineTo(671.7, 336.9);
+			ctx.lineTo(906.0, 336.9);
+			ctx.lineTo(906.0, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Finishing
+			ctx.beginPath();
+			ctx.moveTo(629.1, 400.8);
+			ctx.lineTo(437.4, 400.8);
+			ctx.lineTo(437.4, 209.1);
+			ctx.lineTo(629.1, 209.1);
+			ctx.lineTo(629.1, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Company
+			ctx.beginPath();
+			ctx.moveTo(437.4, 486.0);
+			ctx.lineTo(245.7, 486.0);
+			ctx.lineTo(245.7, 422.1);
+			ctx.lineTo(437.4, 422.1);
+			ctx.lineTo(437.4, 486.0);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check eCommerce
+			ctx.beginPath();
+			ctx.moveTo(906.0, 209.1);
+			ctx.lineTo(671.7, 209.1);
+			ctx.lineTo(671.7, 273.0);
+			ctx.lineTo(906.0, 273.0);
+			ctx.lineTo(906.0, 209.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check IT
+			ctx.moveTo(906.0, 273.1);
+			ctx.lineTo(671.7, 273.1);
+			ctx.lineTo(671.7, 336.9);
+			ctx.lineTo(906.0, 336.9);
+			ctx.lineTo(906.0, 273.1);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Market
+			ctx.beginPath();
+			ctx.moveTo(181.8, 400.8);
+			ctx.lineTo(54.0, 400.8);
+			ctx.lineTo(54.0, 358.3);
+			ctx.lineTo(181.8, 358.3);
+			ctx.lineTo(181.8, 400.8);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Fabrication
+			ctx.beginPath();
+			ctx.moveTo(160.5, 166.5);
+			ctx.lineTo(160.5, 273.1);
+			ctx.lineTo(54.0, 273.1);
+			ctx.lineTo(54.0, 358.3);
+			ctx.lineTo(181.8, 358.3);
+			ctx.lineTo(181.8, 400.8);
+			ctx.lineTo(245.7, 400.8);
+			ctx.lineTo(245.7, 166.5);
+			ctx.lineTo(160.5, 166.5);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+
+			// Check Engineering
+			ctx.beginPath();
+			ctx.moveTo(906.0, 102.6);
+			ctx.lineTo(671.7, 102.6);
+			ctx.lineTo(671.7, 166.5);
+			ctx.lineTo(906.0, 166.5);
+			ctx.lineTo(906.0, 102.6);
+			ctx.closePath();
+			if(ctx.isPointInPath(x, y)){
+				$(e.currentTarget).css('cursor','pointer');
+				return;
+			}
+			$(e.currentTarget).css('cursor','auto');
+		};
 		var ctx = canvas.getContext("2d");
 		canvas.width = 960;
 		canvas.height = 540;
