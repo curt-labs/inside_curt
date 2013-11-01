@@ -223,6 +223,7 @@ $(function(){
 
 	var completeHandler = function(){
 		$('.hidden-videos').fadeOut();
+		$('.curt-layout').show();
 		$('.return-to-menu').hide();
 	};
 	var playVideo = function(name){
@@ -720,9 +721,10 @@ $(function(){
 		var name = $(this).data('name');
 		currentVideo = name;
 		$('.jwplayer').hide();
+		$('.curt-layout').hide();
 		$('.hidden-videos [id$=_wrapper]').hide();
-		$('#'+name+'_wrapper').fadeIn();
-		$('.hidden-videos').fadeIn();
+		$('#'+name+'_wrapper, .hidden-videos, #'+name).css('display','block');
+		//$('.hidden-videos').fadeIn();
 		jwplayer(name).play();
 	});
 	$(document).on('click','.return-to-menu',function(e){
