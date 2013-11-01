@@ -43,13 +43,10 @@ $(function(){
 	};
 
 	var canvasHandler = function(e){
-		//var x = e.x - 140;
-		//var y = e.y - 175;
-		
 		var rect = e.currentTarget.getBoundingClientRect();
 		var x = e.clientX - rect.left;
 		var y = e.clientY - rect.top;
-		
+
 		// Check Quality
 		ctx.beginPath();
 		ctx.moveTo(245.7, 400.8);
@@ -198,7 +195,7 @@ $(function(){
 	};
 
 	var testing = getQueryVariable("testing");
-	if(Modernizr.canvas && testing === undefined){
+	if(Modernizr.canvas && testing === undefined && navigator.appName.indexOf('Microsoft') === -1){
 		var ctx = canvas.getContext("2d");
 		canvas.width = 960;
 		canvas.height = 540;
@@ -719,7 +716,9 @@ $(function(){
 
 		$('.ie8-menu .menu li').removeClass('active');
 		$(this).parent().addClass('active');
+		jwplayer(currentVideo).stop();
 		var name = $(this).data('name');
+		currentVideo = name;
 		$('.jwplayer').hide();
 		$('.hidden-videos [id$=_wrapper]').hide();
 		$('#'+name+'_wrapper').fadeIn();
