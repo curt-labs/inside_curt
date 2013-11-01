@@ -44,7 +44,7 @@ $(function(){
 
 	var canvasHandler = function(e){
 		var rect = e.currentTarget.getBoundingClientRect();
-		var x = e.clientX - rect.left;
+		var x = e.clientX - rect.left + 50;
 		var y = e.clientY - rect.top;
 
 		// Check Quality
@@ -196,7 +196,7 @@ $(function(){
 
 	var canvasMouseHandler = function(e){
 		var rect = e.currentTarget.getBoundingClientRect();
-		var x = e.clientX - rect.left;
+		var x = e.clientX - rect.left + 50;
 		var y = e.clientY - rect.top;
 
 		// Check Quality
