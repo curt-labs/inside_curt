@@ -45,10 +45,10 @@ p.title{
 	left: 0;
 	z-index: 10;
 }
-
+/*
 .hidden-videos .jwplayer{
 	display: none;
-}
+}*/
 
 #canvas{
 	height:540px;
@@ -133,6 +133,9 @@ p.title{
 .ie8-menu .map{
 	float:left;
 	position: relative;
+	/*width: 646px;
+	height: 410px;
+	background: #2c2e2b;*/
 }
 
 .ie8-menu .map .hidden-videos{
