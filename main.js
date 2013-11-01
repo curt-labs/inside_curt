@@ -899,7 +899,7 @@ $(function(){
 		if(currentVideo !== undefined && currentVideo !== ''){
 			jwplayer(currentVideo).stop();
 		}
-		var name = $(this).data('name');
+		var name = $(this).attr('name');
 		loadPlayer(name,function(){
 			currentVideo = name;
 			$('.jwplayer').hide();
