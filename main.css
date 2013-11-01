@@ -121,6 +121,7 @@ p.title{
 	width: 32px;
 	vertical-align: middle;
 	margin: 3px 4px;
+	border:none;
 }
 
 .ie8-menu .menu ul li a:hover, .ie8-menu .menu ul li.active a{
@@ -135,7 +136,7 @@ p.title{
 
 .ie8-menu .map .hidden-videos{
 	width: 646px !important;
-	height:408px !important;
+	height:410px !important;
 	position: absolute;
 	z-index: 10;
 }
@@ -160,5 +161,5 @@ p.title{
 
 .ie8-menu .map img.curt-layout{
 	width: 646px;
-	height:408px;
+	height:410px;
 }
