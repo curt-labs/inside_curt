@@ -887,7 +887,11 @@ $(function(){
 		}
 		jwplayer(currentVideo).stop();
 		completeHandler();
-	})
+	});
+
+	$(function(){
+		loadPlayer(function(){});
+	});
 
 });
 
